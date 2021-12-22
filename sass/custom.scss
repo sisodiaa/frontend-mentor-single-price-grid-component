@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
+$breakpoint-mobile: 50em;
+
 :root {
   --color-cyan:          hsl(179, 62%, 43%);
   --color-light-cyan:    hsl(179, 53%, 51%);
@@ -58,6 +60,7 @@ button {
 
 .container {
   width: 86%;
+  max-width: 45rem;
   margin: 0 auto;
 }
 
@@ -67,6 +70,13 @@ button {
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0rem 0.5rem 1.8rem -0.3rem hsla(0, 0%, 32%, 0.4);
+
+  @media only screen and (min-width: $breakpoint-mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
 
   &__appeal {
     padding: 1.5rem 1.5rem 2rem 1.5rem;
@@ -84,6 +94,10 @@ button {
     & .grid__text {
       color: var(--color-grayish-blue);
     }
+
+    @media only screen and (min-width: $breakpoint-mobile) {
+      padding: 3rem 3rem;
+    }
   }
 
   &__text {
@@ -94,6 +108,11 @@ button {
     padding: 1.5rem 1.5rem 2rem 1.5rem;
     color: var(--color-white);
     background-color: var(--color-cyan);
+
+    @media only screen and (min-width: $breakpoint-mobile) {
+      flex: 1;
+      padding: 3rem 3rem;
+    }
 
     & .grid__text {
       color: var(--color-white);
@@ -117,6 +136,11 @@ button {
     padding: 1.5rem 1.5rem 2rem 1.5rem;
     background-color: var(--color-light-cyan);
     color: var(--color-white);
+
+    @media only screen and (min-width: $breakpoint-mobile) {
+      flex: 1;
+      padding: 3rem 3rem;
+    }
   }
 }
 
