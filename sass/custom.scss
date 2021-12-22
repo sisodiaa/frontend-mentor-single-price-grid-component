@@ -3,12 +3,13 @@
 $breakpoint-mobile: 50em;
 
 :root {
-  --color-cyan:          hsl(179, 62%, 43%);
-  --color-light-cyan:    hsl(179, 53%, 51%);
-  --color-bright-yellow: hsl(71, 73%, 54%);
-  --color-light-gray:    hsl(204, 43%, 93%);
-  --color-grayish-blue:  hsl(218, 22%, 67%);
-  --color-white:         hsl(0, 0%, 100%);
+  --color-cyan:            hsl(179, 62%, 43%);
+  --color-light-cyan:      hsl(179, 53%, 51%);
+  --color-bright-yellow:   hsl(71, 73%, 54%);
+  --color-brighter-yellow: hsl(71, 73%, 64%);
+  --color-light-gray:      hsl(204, 43%, 93%);
+  --color-grayish-blue:    hsl(218, 22%, 67%);
+  --color-white:           hsl(0, 0%, 100%);
 }
 
 *,
@@ -56,6 +57,16 @@ button {
   color: var(--color-white);
   background-color: var(--color-bright-yellow);
   box-shadow: 0rem 0.5rem 1.8rem -0.3rem hsla(0, 0%, 32%, 0.4);
+  cursor: pointer;
+  transition: all 0.3s;
+
+  @media only screen and (min-width: $breakpoint-mobile) {
+    &:hover {
+      background-color: var(--color-brighter-yellow);
+      transform: translateY(-5px);
+      box-shadow: 0rem 0.5rem 2.2rem 0.1rem hsla(0, 0%, 32%, 0.4);
+    }
+  }
 }
 
 .container {
